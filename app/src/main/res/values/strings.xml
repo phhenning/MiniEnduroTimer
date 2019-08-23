@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+ <resources>
+
+    <string name="app_name">EnduroTimer</string>
+
+
+    <string name="message_stage">Stage No</string>
+
+    <string name="button_tag">Tag</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="button_count_down">Start Countdown</string>
+
+    <string name="button_add_stage">Create</string>
+
+    <string name="help_Stage_Start_End">Enter the Stage number then chose the position you marshal.</string>
+    <string name="help_Stage_Start">Enter Race No then Tap Start Copuntdown. </string>
+   <string name="help_Stage_Start_close">When you`re done, use back button to setup for next stage</string>
+
+    <string name="title_activity_stage_start">Stage Start</string>
+       <string name="title_activity_stage_end">Stage End</string>
+    <string name="hello_world">Hello world!</string>
+   <string name="title_activity_display_message">My Message</string>
+      <string name="title_activity_edit_end_tag">Enter Race No</string>
+    <string name="title_activity_lap_end">Lap Race Timer</string>
+</resources>

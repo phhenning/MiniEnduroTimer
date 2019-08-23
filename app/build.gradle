@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'android.key'
+            keyPassword 'm0rew00d'
+            storeFile file('../android.keystore')
+            storePassword 'm0rew00d'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0"
+    defaultConfig {
+        applicationId "com.henning.pieter.endurotimer"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "2.5"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                appendVersionName(variant, 'EnduroTimer', "2.5")
+            }
+        }
+        debug {
+            debuggable true
+        }
+    }
+    productFlavors {
+    }
+}
+
+def appendVersionName(variant, EnduroTimer, versionName) {
+    variant.outputs.each { output ->
+        if (output.zipAlign) {
+            def file = output.outputFile
+            def fileName = file.name.replace("app-release.apk",  EnduroTimer  + "-v" + versionName +".apk")
+            output.outputFile = new File(file.parent, fileName)
+        }
+
+        def file = output.packageApplication.outputFile
+        def fileName = file.name.replace("app-release.apk", EnduroTimer + "-v" + versionName +".apk")
+        output.packageApplication.outputFile = new File(file.parent, fileName)
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

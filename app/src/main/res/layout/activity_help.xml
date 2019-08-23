@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_column="0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <TextView android:id="@+id/textHelpMain0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Main Page: "
+
+            android:textStyle="bold" />
+
+        <TextView android:id="@+id/textHelpMain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            Race Name: if not suplied the current date will be used.
+            Stage Name: if not supplied time will be used.
+            A single rider file is used ( in  /Documents/EnduroTimer ) "
+ />
+
+
+
+        <TextView android:id="@+id/textHelpStart0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start View"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpStart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            Set a countdown time ( it may be 0 for instant start ).
+            Enter rider no and tap start.
+            To edit a rider no simply click on the item in the list"
+             />
+
+
+        <TextView android:id="@+id/textHelpLap0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Lap View"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpLap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            When a Lap event is started the time is recorded in the header.
+            Tag a rider each time a lap is complete.
+            To edit a rider no simply click on the item in the list"
+            />
+
+
+        <TextView android:id="@+id/textHelpFinish0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish View"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpFinish1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            Tag a rider when he crosses the finish.
+            To edit a rider no simply click on the item in the list"
+            />
+
+
+        <TextView android:id="@+id/textHelpResults0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Results View"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpResultsh1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            All stage logs and results are placed in a folder named by the race inside /Documents/EnduroTimer.
+            To calculate Results, select a Start and Finish log file and click calculate.
+            The Calculated results are displayed and also saved as a new file.
+            Results are sorted from fastest to slowest.
+            Using the results button you can load and view a results file.
+            If you did not specify the event name before calculating results, the results will be i a folder with the current date."
+            />
+
+
+        <TextView android:id="@+id/textHelpRider0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Rider Data"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpRider1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            A Rider template file will be created when the app runs the firts time (/Document/EmnduroTimer/)
+            Edit/Replace this file with the rider lost for your race."/>
+
+
+
+        <TextView android:id="@+id/textHelpLogs0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Data"
+            android:textStyle="bold"
+
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textHelpLogs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+            All files are placed in /Document/EmnduroTimer.
+            Log files, Rider Files and Results Files are all CSV.
+            Files are grouped in folders named by the event ort event date.
+            log and results files contain info in text and timestamp in ms."/>
+
+</LinearLayout>
+</ScrollView>

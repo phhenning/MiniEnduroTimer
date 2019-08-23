@@ -1,0 +1,132 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:stretchColumns="1"
+    android:id="@+id/StageVie12wActivity">
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="false">
+
+        <TextView android:id="@+id/textEndStageLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stage: "
+            android:textSize="30sp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/textEndStageNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text=" # "
+            android:layout_column="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/textEndHelp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Tag when races crosses finish, then edit rider no. You can tag multiple times and edit the Race No by tapping the entry in the list."
+            android:layout_column="0"
+            android:layout_span="4"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/textViewFinisNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:hint="Race No."
+            android:layout_column="0"
+            android:layout_span="3"
+            android:clickable="true"
+            android:numeric="integer"
+            android:editable="true" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="true">
+
+
+        <TextClock android:id="@+id/textClockEnd"
+            android:format12Hour="hh:mm:ss "
+            android:format24Hour="kk:mm:ss "
+            android:textSize="20sp"
+            android:shadowColor="#7fffffff"
+            android:shadowRadius="3.0"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:layout_height="wrap_content"
+            android:layout_column="0" />
+
+        <Button android:id="@+id/butTagRider"
+            android:layout_height="wrap_content"
+            android:onClick="tagRiderFinish"
+            android:text="Tag"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:layout_column="1"
+            android:textSize="20sp"
+            android:background="@drawable/button_light_orange"
+            android:layout_span="1"
+            android:enabled="true"
+            android:layout_weight="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="true">
+
+        <TextView android:id="@+id/textEndLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_column="0"
+            android:layout_span="4"
+            android:text="Timing Log"
+            android:gravity="center_horizontal" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listEndView"
+            android:layout_span="4"
+            android:layout_column="0"
+            android:background="@drawable/list_light_gray"
+            android:clickable="true"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+ />
+    </TableRow>
+
+
+</TableLayout>

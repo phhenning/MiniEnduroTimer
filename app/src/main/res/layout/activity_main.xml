@@ -1,0 +1,178 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:orientation="horizontal" >
+
+    <!-- Clock & Stage -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="true">
+
+
+        <TextClock android:id="@+id/textClock"
+            android:format12Hour="hh:mm:ss aa"
+            android:format24Hour="kk:mm:ss"
+
+            android:textSize="30sp"
+            android:shadowColor="#7fffffff"
+            android:shadowRadius="3.0"
+            android:layout_span="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:gravity="center_horizontal" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/textRaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:layout_column="0"
+            android:gravity="left" />
+
+
+        <EditText android:id="@+id/editRace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Event"
+            android:editable="true"
+            android:layout_span="3"
+            android:layout_column="1"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/butFindRace"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:onClick="findRace"
+            android:layout_column="2" />
+
+    </TableRow>
+
+
+    <!-- Race #  -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/textStageNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stage # (eg SS1)"
+            android:layout_column="0"
+            android:gravity="left" />
+
+        <EditText android:id="@+id/editStage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Number"
+            android:editable="true"
+            android:numeric="integer"
+            android:layout_column="1"
+            android:layout_span="3"
+            android:inputType="text" />
+
+
+        <Button
+            android:id="@+id/butFindStage"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:onClick="findStage"
+            android:layout_column="2" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button android:id="@+id/butStartStage"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Stage Start"
+            android:background="@drawable/button_light_green"
+            android:onClick="addStageStart"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:layout_weight="3"
+            android:layout_column="0" />
+
+        <Button android:id="@+id/butStartLap"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Lap Race"
+            android:background="@drawable/button_light_blue"
+            android:onClick="lapRaceStart"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:visibility="invisible"
+            android:layout_column="1" />
+
+        <Button android:id="@+id/butEndStage"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Stage Finish"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:layout_weight="3"
+            android:background="@drawable/button_light_orange"
+            android:onClick="addStagEnd"
+            android:layout_column="3" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button android:id="@+id/butResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:text="Results"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_gray"
+            android:onClick="calculateResults"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/textLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rider List"
+            android:layout_column="0"
+            android:layout_span="4"
+            android:gravity="center_horizontal" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView android:id="@+id/listRiderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_light_gray"
+            android:layout_span="5"
+            android:layout_column="0" />
+    </TableRow>
+
+
+</TableLayout>

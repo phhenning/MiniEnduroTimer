@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:orientation="horizontal" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="false">
+
+        <TextView android:id="@+id/textResStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Start: "
+            android:textSize="20sp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/textResStageStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text=" [ poke here ]"
+            android:onClick="choseStartFile"
+            android:layout_column="1"
+            android:enabled="true"
+            android:clickable="true" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/textResEnd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish: "
+            android:padding="10sp"
+
+            android:textSize="20sp"
+            android:layout_column="0"
+            android:layout_span="1"/>
+
+        <TextView android:id="@+id/textResStageEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text=" [ poke here ] "
+            android:clickable="true"
+            android:onClick="choseFinishFile"
+            android:layout_column="1" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:clickable="true">
+
+        <Button android:id="@+id/butCalulateResults"
+            android:layout_height="wrap_content"
+            android:onClick="calulateResults"
+            android:text="Calculate"
+            android:layout_column="0"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:textSize="20sp"
+            android:background="@drawable/button_light_blue"
+            android:layout_span="1"
+            android:enabled="true"
+            android:layout_weight="0" />
+
+        <Button android:id="@+id/butLoadResults"
+            android:layout_height="wrap_content"
+            android:onClick="loadResults"
+            android:text="Load"
+            android:layout_column="1"
+            android:padding="10sp"
+            android:layout_margin="4sp"
+            android:textSize="20sp"
+            android:background="@drawable/button_light_gray"
+            android:layout_span="1"
+            android:enabled="true"
+            android:layout_weight="0" />
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listResultsView"
+            android:layout_span="4"
+            android:layout_column="0"
+            android:clickable="true"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:background="@drawable/list_light_gray"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            />
+    </TableRow>
+
+
+</TableLayout>
